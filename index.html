@@ -1,123 +1,101 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Muhammad Zeeshan — Autonomous Robotics and Reinforcement Learning Researcher">
-  <title>Muhammad Zeeshan | Robotics Research</title>
+  <meta name="theme-color" content="#0a1726">
+  <meta name="description" content="Muhammad Zeeshan — research in autonomous robotics, learning-based control, multimodal perception, and safe decision-making under uncertainty.">
+  <meta property="og:title" content="Muhammad Zeeshan | Robotics & Intelligent Control Research">
+  <meta property="og:description" content="Robotics research, selected projects, publications, and academic CV.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://muhammad-zeeshan-2023.github.io/">
+  <title>Muhammad Zeeshan — Robotics Research</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 950px;
-      margin: auto;
-      padding: 40px 24px;
-      line-height: 1.7;
-      color: #263344;
-    }
-    header { border-bottom: 1px solid #ddd; padding-bottom: 24px; }
-    h1 { color: #152b48; margin-bottom: 5px; }
-    h2 { color: #173b65; margin-top: 36px; }
-    a { color: #145b93; }
-    .subtitle { color: #526276; }
-    .project {
-      padding: 14px 18px;
-      margin: 12px 0;
-      background: #f4f7fa;
-      border-radius: 8px;
-    }
-    footer { margin-top: 45px; border-top: 1px solid #ddd; }
+  :root{--bg:#f7f9fb;--paper:#fff;--ink:#142233;--muted:#54677a;--subtle:#75869a;--line:#e0e7ed;--navy:#0b1929;--deep:#101f32;--accent:#176e92;--accent2:#30afbb;--soft:#e8f4f7;--radius:16px;--shadow:0 10px 35px rgba(13,41,60,.055)}
+  *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:94px}body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;line-height:1.65}a{color:inherit;text-decoration:none}button{font:inherit}img{max-width:100%;display:block}::selection{background:#b5e9ed;color:#0b1929}button:focus-visible,a:focus-visible{outline:3px solid #51bbcb;outline-offset:4px}
+  .container{width:min(1120px,calc(100% - 48px));margin:auto}.eyebrow{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;font-weight:800;color:var(--accent)}.site-header{height:72px;position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;font-family:Manrope,sans-serif;font-weight:800;letter-spacing:-.04em;font-size:1.05rem}.brand-mark{display:grid;place-items:center;background:var(--navy);color:white;width:37px;height:37px;border-radius:11px;font-size:.82rem;letter-spacing:-.03em}.nav-links{display:flex;align-items:center;gap:27px;font-size:.84rem;font-weight:700;color:#405165}.nav-links a:hover,.footer-links a:hover{color:var(--accent)}.nav-cta{border:1px solid #bdd5df;padding:9px 14px;border-radius:8px;color:#155f7d!important}.menu-button{display:none;background:none;border:0;padding:8px;color:var(--ink);cursor:pointer}
+  .hero{color:#fff;background:radial-gradient(circle at 84% 17%,#1d4960 0%,transparent 38%),linear-gradient(123deg,#0a1727,#122b3d 69%,#123747);overflow:hidden;position:relative}.hero:after{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(188,230,239,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(188,230,239,.035) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(90deg,transparent 25%,black 100%)}.hero-inner{padding:92px 0 94px;display:grid;grid-template-columns:1.17fr .83fr;align-items:center;gap:44px;position:relative;z-index:1}.hero .eyebrow{color:#7ed9df}.hero h1{font-family:Manrope,sans-serif;font-weight:800;font-size:clamp(2.9rem,5.2vw,4.5rem);line-height:1.13;letter-spacing:-.065em;margin:15px 0 18px}.hero h1 span{color:#82dde0}.hero-lead{max-width:640px;color:#d3e0ea;font-size:1.16rem;font-weight:500;line-height:1.63;margin:0 0 21px}.hero-note{max-width:560px;color:#a9c0d1;font-size:.95rem;margin:0 0 30px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;gap:9px;align-items:center;justify-content:center;padding:12px 18px;border-radius:9px;font-weight:800;font-size:.88rem;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.btn-primary{background:#8cdee0;color:#082132}.btn-primary:hover{background:#adf0ee}.btn-outline{border:1px solid #678499;color:white}.btn-outline:hover{background:rgba(255,255,255,.08)}.hero-affiliations{display:flex;gap:24px;margin-top:35px;flex-wrap:wrap;color:#c0d3df;font-size:.8rem}.hero-affiliations strong{color:white;display:block;font-size:.92rem}.hero-visual{padding:20px;border:1px solid rgba(169,223,230,.2);background:rgba(6,21,34,.38);border-radius:22px;box-shadow:0 30px 65px rgba(1,9,16,.18)}.visual-top{display:flex;justify-content:space-between;font-size:.71rem;letter-spacing:.11em;text-transform:uppercase;color:#92adbc;font-weight:700}.visual-top b{color:#8cdfd7}.system-svg{width:100%;height:auto;margin:17px 0 10px}.visual-footer{display:flex;justify-content:space-between;gap:12px;border-top:1px solid #284456;padding-top:12px;color:#a5beca;font-size:.72rem}.visual-footer span:last-child{color:#84d6d8}
+  .stats{background:white;border-bottom:1px solid var(--line)}.stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}.stat{padding:23px 24px;border-right:1px solid var(--line)}.stat:first-child{padding-left:0}.stat:last-child{border:0}.stat strong{font-size:1.4rem;font-family:Manrope,sans-serif;line-height:1.3;display:block;letter-spacing:-.04em}.stat small{display:block;color:var(--muted);font-size:.77rem;margin-top:4px}
+  section{padding:88px 0}.section-header{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:31px}.section-title{font-size:clamp(1.8rem,3.6vw,2.55rem);letter-spacing:-.055em;line-height:1.2;font-family:Manrope,sans-serif;margin:10px 0 0}.section-description{max-width:530px;margin:0;color:var(--muted);font-size:.94rem}.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px}.about-text p{font-size:1rem;color:#425568;margin:0 0 18px}.focus-box{border:1px solid #cbdfe6;border-radius:15px;background:#edf7f9;padding:26px}.focus-box h3{margin:0 0 17px;font-size:1.02rem;letter-spacing:-.025em}.focus-list{display:grid;gap:13px}.focus-item{display:flex;align-items:start;gap:12px;color:#324e60;font-size:.93rem}.focus-dot{width:8px;height:8px;min-width:8px;margin-top:9px;border-radius:50%;background:var(--accent2)}.mini-links{display:flex;gap:15px;flex-wrap:wrap;margin-top:22px}.text-link{font-size:.87rem;font-weight:800;color:var(--accent);border-bottom:1px solid #b2d1dc;padding-bottom:2px}.text-link:hover{color:#07405b}
+  .section-alt{background:#fff;border-block:1px solid #edf0f3}.projects-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.project-card{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}.project-card.featured{grid-column:span 1}.project-image{height:228px;background:#132c3e;position:relative;overflow:hidden}.project-image img{width:100%;height:100%;object-fit:cover;position:relative;z-index:2}.project-image.has-image .image-art{display:none}.image-art{height:100%;display:flex;align-items:center;justify-content:center;position:relative;isolation:isolate;background:radial-gradient(ellipse at 72% 30%,#295f72,transparent 54%),linear-gradient(130deg,#102537,#163b4c)}.image-art:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#d7f3f21a 1px,transparent 1px),linear-gradient(90deg,#d7f3f21a 1px,transparent 1px);background-size:24px 24px;transform:perspective(300px) rotateX(15deg) scale(1.3);z-index:-1}.art-svg{width:76%;height:82%;filter:drop-shadow(0 10px 20px #0005)}.image-caption{position:absolute;z-index:3;bottom:12px;left:14px;background:#0b1f31c9;border:1px solid #8bbfc855;color:#d7ebf0;font-size:.71rem;font-weight:700;letter-spacing:.05em;padding:5px 9px;border-radius:6px}.project-body{padding:25px 26px 27px;flex:1;display:flex;flex-direction:column}.project-overline{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;font-weight:800;color:var(--accent)}.project-body h3{font-size:1.24rem;font-family:Manrope,sans-serif;line-height:1.3;letter-spacing:-.035em;margin:10px 0 9px}.project-body p{margin:0 0 15px;color:#526375;font-size:.89rem}.project-method{border-top:1px solid var(--line);padding-top:14px;font-size:.78rem;color:#4a6071;margin-top:auto}.project-method strong{color:#183448}.project-status{margin-top:14px;display:flex;justify-content:space-between;gap:10px;align-items:center}.project-status span{font-size:.72rem;font-weight:800;color:#547184}.project-status a{color:var(--accent);font-size:.8rem;font-weight:800}.project-status a:hover{text-decoration:underline}
+  .research-quote{padding:35px 40px;border-radius:16px;background:#0e2536;color:white;margin-top:24px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:25px}.research-quote p{margin:5px 0 0;color:#c3d7e3;font-size:.91rem;max-width:700px}.research-quote a{border:1px solid #6693a5;padding:11px 16px;border-radius:9px;font-weight:700;font-size:.83rem;white-space:nowrap}
+  .publication-list{display:grid;gap:12px}.pub{display:grid;grid-template-columns:76px 1fr;gap:19px;padding:21px 22px;background:var(--paper);border:1px solid var(--line);border-radius:12px}.pub-number{font-family:Manrope,sans-serif;font-size:1.07rem;color:#8b9aaa;font-weight:800}.pub h3{font-size:.96rem;line-height:1.5;margin:0 0 5px;font-weight:800;letter-spacing:-.014em}.pub p{color:var(--muted);font-size:.81rem;margin:0}.tag{display:inline-block;border:1px solid #c4d9df;background:#edf7f8;color:#176379;font-size:.7rem;font-weight:800;border-radius:5px;padding:3px 7px;margin-top:10px}.tag.submitted{background:#f4f6f9;border-color:#d9e0e7;color:#5b6e80}.tag.prep{background:#fff8e9;border-color:#eadbb9;color:#8b6a2e}.pub-mini-note{margin-top:15px;font-size:.8rem;color:var(--muted)}
+  .experience{display:grid;grid-template-columns:1fr 1fr;gap:22px}.experience-card{padding:25px;border:1px solid var(--line);background:white;border-radius:14px}.experience-card h3{margin:8px 0 4px;font-family:Manrope,sans-serif;font-size:1.06rem}.experience-card .date{color:#63788a;font-size:.79rem;font-weight:700}.experience-card p{color:#4f6272;font-size:.88rem;margin:12px 0 0}.awards{margin-top:26px;display:flex;gap:10px;flex-wrap:wrap}.award{font-size:.78rem;font-weight:700;border:1px solid #d2e1e7;background:white;border-radius:8px;padding:9px 13px;color:#385b6c}
+  .contact-section{background:#0d2030;color:#fff}.contact-card{display:grid;grid-template-columns:1fr auto;gap:34px;align-items:center}.contact-section .eyebrow{color:#7ad6da}.contact-section h2{font-family:Manrope,sans-serif;font-size:clamp(2rem,4vw,3rem);letter-spacing:-.055em;margin:8px 0 12px}.contact-section p{max-width:660px;color:#bbd0dd;margin:0;font-size:.96rem}.contact-actions{display:flex;gap:10px;flex-wrap:wrap}.contact-section .btn-outline{border-color:#5c8195}.footer{background:#081724;color:#92a7b7;padding:23px 0}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.75rem}.footer-links{display:flex;gap:20px}
+  @media(max-width:900px){.nav-links{gap:14px}.hero-inner{grid-template-columns:1fr;gap:15px;padding:70px 0}.hero-visual{max-width:600px}.about-grid{gap:22px}.contact-card{grid-template-columns:1fr}.stats-grid{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+  @media(max-width:650px){.container{width:min(100% - 34px,1120px)}.site-header{height:65px}.menu-button{display:block}.nav-links{display:none;position:absolute;top:65px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:white;box-shadow:0 20px 30px #14223318;padding:12px 22px}.nav-links.open{display:flex}.nav-links a{padding:11px 6px}.nav-cta{border:0;padding:11px 6px!important}.hero-inner{padding:59px 0}.hero h1{font-size:2.85rem}.hero-lead{font-size:1.02rem}.hero-visual{padding:13px}.hero-affiliations{gap:20px}.stat{padding:20px 12px}.stat:first-child{padding-left:0}.stat strong{font-size:1.1rem}.stat small{font-size:.7rem}section{padding:64px 0}.section-header{display:block}.section-description{margin-top:13px}.about-grid,.projects-grid,.experience{grid-template-columns:1fr}.project-image{height:207px}.project-body{padding:23px}.research-quote{grid-template-columns:1fr;padding:25px}.pub{grid-template-columns:46px 1fr;padding:18px 14px;gap:9px}.contact-actions{justify-content:start}.footer-inner{flex-direction:column}.brand{font-size:.93rem}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
   </style>
 </head>
 <body>
-  <header>
-    <h1>Muhammad Zeeshan</h1>
-    <p class="subtitle">
-      Autonomous Robotics | Reinforcement Learning |
-      Multimodal Perception | Safe Control
-    </p>
-    <p>
-      MSc Researcher, Karadeniz Technical University<br>
-      Visiting Research Student, KAUST
-    </p>
-    <a href="https://github.com/Muhammad-Zeeshan-2023">
-      GitHub Profile
-    </a>
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Muhammad Zeeshan home"><span class="brand-mark">MZ</span> Muhammad Zeeshan</a>
+      <button class="menu-button" aria-label="Open navigation" aria-expanded="false" id="menuButton">☰</button>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="#experience">Experience</a><a href="#contact">Contact</a><a class="nav-cta" href="assets/Muhammad_Zeeshan_CV.pdf" target="_blank" rel="noopener">Download CV ↗</a>
+      </nav>
+    </div>
   </header>
-
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I am an MSc researcher in Electrical and Electronics
-      Engineering at Karadeniz Technical University and
-      a Visiting Research Student at KAUST.
-      My research focuses on autonomous robotic systems,
-      learning-based control, multimodal sensor fusion,
-      and robust decision-making under uncertainty.
-    </p>
-  </section>
-
-  <section>
-    <h2>Research Interests</h2>
-    <ul>
-      <li>Autonomous Robot Navigation and Motion Planning</li>
-      <li>Reinforcement Learning for Robotics and Control</li>
-      <li>Multimodal Perception and Sensor Fusion</li>
-      <li>Safe and Trustworthy Autonomous Systems</li>
-      <li>Networked and Cyber-Physical Control</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Selected Research Projects</h2>
-
-    <div class="project">
-      <h3>SA-MASAC</h3>
-      <p>Staleness-aware reinforcement learning for
-      robot trajectory tracking under communication impairments.</p>
+  <main id="top">
+    <div class="hero">
+      <div class="container hero-inner">
+        <div>
+          <div class="eyebrow">Research Portfolio · Robotics & Intelligent Control</div>
+          <h1>Muhammad<br><span>Zeeshan.</span></h1>
+          <p class="hero-lead">Building reliable autonomous systems at the intersection of robot learning, multimodal perception, and control.</p>
+          <p class="hero-note">My work investigates how robots can perceive, estimate, and act safely when sensing and communication are delayed, degraded, or uncertain.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#research">Explore research <span aria-hidden="true">↗</span></a><a class="btn btn-outline" href="assets/Muhammad_Zeeshan_CV.pdf" target="_blank" rel="noopener">Academic CV ↓</a></div>
+          <div class="hero-affiliations"><div><strong>KAUST</strong>Visiting Research Student</div><div><strong>Karadeniz Technical University</strong>MSc · Electrical & Electronics Engineering</div></div>
+        </div>
+        <div class="hero-visual" aria-label="Stylized autonomous robotics perception and control illustration">
+          <div class="visual-top"><span>Research system overview</span><b>PERCEPTION → ACTION</b></div>
+          <svg class="system-svg" viewBox="0 0 480 320" role="img" aria-label="Diagram linking sensing, estimation, decision-making and robot control">
+            <defs><linearGradient id="lineG" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8edbd9"/><stop offset="1" stop-color="#3d91b1"/></linearGradient></defs>
+            <g fill="none" stroke="#47788b" stroke-width="1.5" opacity=".6"><path d="M240 52 L80 124 L80 226 L240 284 L400 226 L400 124 Z"/><path d="M240 52V150M80 124L240 190L400 124M240 190V284"/></g>
+            <g fill="#112c3d" stroke="url(#lineG)" stroke-width="2"><rect x="176" y="20" width="128" height="54" rx="10"/><rect x="11" y="129" width="130" height="56" rx="10"/><rect x="339" y="129" width="130" height="56" rx="10"/><rect x="173" y="252" width="134" height="56" rx="10"/></g>
+            <g fill="#e6f7f9" font-size="14" text-anchor="middle" font-family="sans-serif" font-weight="700"><text x="240" y="44">Sensing</text><text x="240" y="62" font-size="10" font-weight="400" fill="#8bafc0">RGB-D · LiDAR · RF</text><text x="76" y="155">Estimation</text><text x="76" y="172" font-size="10" font-weight="400" fill="#8bafc0">Fusion · Belief</text><text x="404" y="155">Decision</text><text x="404" y="172" font-size="10" font-weight="400" fill="#8bafc0">RL · Planning</text><text x="240" y="277">Control</text><text x="240" y="294" font-size="10" font-weight="400" fill="#8bafc0">Safety · Execution</text></g>
+            <circle cx="240" cy="175" r="39" fill="#1c4c5b" stroke="#79d5d2" stroke-width="2"/><circle cx="240" cy="175" r="27" fill="#123441" stroke="#477e8d"/><path d="M220 179h40m-20-20v40" stroke="#8bdcdb" stroke-width="2"/><circle cx="240" cy="175" r="7" fill="#89dcd8"/><g fill="#8adad9"><circle cx="240" cy="98" r="4"/><circle cx="163" cy="158" r="4"/><circle cx="317" cy="158" r="4"/><circle cx="240" cy="229" r="4"/></g>
+          </svg>
+          <div class="visual-footer"><span>Robust autonomy under uncertainty</span><span>ROS 2 · RL · Estimation</span></div>
+        </div>
+      </div>
     </div>
-
-    <div class="project">
-      <h3>SCOUT MINI Pro</h3>
-      <p>Robust RGB-D and 3D LiDAR perception,
-      cross-modal validation, and asynchronous sensor fusion.</p>
+    <div class="stats"><div class="container stats-grid"><div class="stat"><strong>3.93 / 4.00</strong><small>MSc CGPA · Ranked 1st</small></div><div class="stat"><strong>Gold Medalist</strong><small>BSc Electrical Engineering</small></div><div class="stat"><strong>KAUST</strong><small>Visiting Research Student</small></div><div class="stat"><strong>9 works</strong><small>Publication & manuscript entries*</small></div></div></div>
+    <section id="about"><div class="container"><div class="section-header"><div><div class="eyebrow">01 / About</div><h2 class="section-title">Research built around<br>real-world uncertainty.</h2></div></div><div class="about-grid"><div class="about-text"><p>I am an MSc researcher in Electrical & Electronics Engineering at <strong>Karadeniz Technical University</strong>, supported by Türkiye Scholarships, and a <strong>Visiting Research Student at KAUST</strong>.</p><p>My research focuses on autonomous robots operating under imperfect information: stale observations, packet loss, sensor faults, and conflicting measurements. I develop and evaluate methods that connect perception and state estimation to learning-based control and safety-aware decisions.</p><p>My experience spans ROS 2-based mobile robotics, RGB-D and 3D LiDAR fusion, model-assisted reinforcement learning, networked control, and UAV threat-localization research. I aim to pursue doctoral research in reliable, adaptive robotic autonomy.</p><div class="mini-links"><a class="text-link" href="https://github.com/Muhammad-Zeeshan-2023" target="_blank" rel="noopener">GitHub profile ↗</a><a class="text-link" href="https://www.linkedin.com/in/m-zeeshan-k/" target="_blank" rel="noopener">LinkedIn ↗</a><a class="text-link" href="assets/Muhammad_Zeeshan_CV.pdf" target="_blank" rel="noopener">Full CV ↗</a></div></div><aside class="focus-box"><h3>Current research directions</h3><div class="focus-list"><div class="focus-item"><span class="focus-dot"></span><span><strong>Safety-preserving perception:</strong> robustness to degraded or conflicting sensing in autonomous navigation.</span></div><div class="focus-item"><span class="focus-dot"></span><span><strong>Communication-aware robot learning:</strong> robust trajectory tracking under stochastic delay and packet loss.</span></div><div class="focus-item"><span class="focus-dot"></span><span><strong>Multimodal estimation:</strong> cross-modal validation, asynchronous fusion, and uncertainty management.</span></div><div class="focus-item"><span class="focus-dot"></span><span><strong>Information-driven robotics:</strong> GNSS threat localization and active UAV investigation planning.</span></div></div></aside></div></div></section>
+    <section id="research" class="section-alt"><div class="container"><div class="section-header"><div><div class="eyebrow">02 / Selected research</div><h2 class="section-title">Projects & technical contributions.</h2></div><p class="section-description">A selection of research projects spanning physical robotic platforms, reinforcement learning, multimodal perception, and networked control. Images can be replaced with your own project photographs.</p></div>
+    <div class="projects-grid">
+      <article class="project-card"><div class="project-image" id="photo-scout"><div class="image-art"><svg class="art-svg" viewBox="0 0 400 200" fill="none"><ellipse cx="210" cy="168" rx="127" ry="19" fill="#061d2a" opacity=".6"/><g stroke="#79d9d3" stroke-width="3"><path d="M105 117l36-48h126l45 48-15 31H117z" fill="#1b5363"/><path d="M144 66h119v32H144z" fill="#0d2536"/><path d="M201 66V37h10v29"/><rect x="175" y="25" width="65" height="18" rx="7" fill="#266477"/><rect x="116" y="145" width="54" height="23" rx="11" fill="#0b1b2c"/><rect x="250" y="145" width="54" height="23" rx="11" fill="#0b1b2c"/></g><g stroke="#61b7c2" opacity=".6"><path d="M209 35L88 10M209 35L280 7M209 35L350 46M209 35L72 67"/></g></svg></div><img src="assets/images/scout-mini.jpg" alt="SCOUT MINI Pro research robot" loading="lazy" onerror="this.remove()"><span class="image-caption">PHYSICAL ROBOTICS · ROS 2</span></div><div class="project-body"><div class="project-overline">Autonomous navigation · Multimodal perception</div><h3>SCOUT MINI Pro — Robust Perception & Person Following</h3><p>Developed a ROS 2 Humble mobile-robot platform integrating RGB-D vision, 3D LiDAR, SLAM, Nav2, obstacle avoidance and person following. Investigated independent LiDAR validation and asynchronous Kalman fusion to assess perception reliability under controlled sensor faults.</p><div class="project-method"><strong>Methods:</strong> ROS 2 · RGB-D · 3D LiDAR · SLAM/Nav2 · statistical validation · Kalman filtering</div><div class="project-status"><span>Ongoing research</span><a href="mailto:engr.m.zeeshan.2023@gmail.com?subject=SCOUT%20MINI%20research%20inquiry">Request details ↗</a></div></div></article>
+      <article class="project-card"><div class="project-image" id="photo-uav"><div class="image-art"><svg class="art-svg" viewBox="0 0 400 200" fill="none"><g stroke="#72cbd3" stroke-width="3"><path d="M200 107L126 66m74 41l74-41m-74 41l-74 49m74-49l74 49"/><circle cx="200" cy="107" r="25" fill="#195166"/><circle cx="112" cy="58" r="31"/><circle cx="288" cy="58" r="31"/><circle cx="112" cy="164" r="31"/><circle cx="288" cy="164" r="31"/><path d="M181 117l-7 23h52l-7-23"/></g><g stroke="#8fe0e0" opacity=".6" stroke-dasharray="5 6"><circle cx="200" cy="107" r="74"/><circle cx="200" cy="107" r="99"/></g><g fill="#93e1de"><circle cx="112" cy="58" r="5"/><circle cx="288" cy="58" r="5"/><circle cx="112" cy="164" r="5"/><circle cx="288" cy="164" r="5"/></g></svg></div><img src="assets/images/gnss-uav.jpg" alt="GNSS-resilient UAV research platform" loading="lazy" onerror="this.remove()"><span class="image-caption">UAV SYSTEMS · ACTIVE SENSING</span></div><div class="project-body"><div class="project-overline">Threat localization · Informative planning</div><h3>Detactic — GNSS-Resilient UAV Investigation</h3><p>Developing an uncertainty-aware UAV framework for GNSS threat investigation using AoA–Doppler observations, EKF-based source localization, and Fisher-information-driven receding-horizon planning. The research includes ROS 2/PX4–Gazebo navigation and information-seeking trajectories.</p><div class="project-method"><strong>Methods:</strong> AoA–Doppler · EKF · Fisher information · receding-horizon planning · ROS 2/PX4</div><div class="project-status"><span>Ongoing collaborative research</span><a href="mailto:engr.m.zeeshan.2023@gmail.com?subject=GNSS%20resilient%20UAV%20research%20inquiry">Request details ↗</a></div></div></article>
+      <article class="project-card"><div class="project-image"><div class="image-art"><svg class="art-svg" viewBox="0 0 400 200" fill="none"><g stroke="#83dcd8" fill="none" stroke-width="2.5"><path d="M15 170q72-16 108-76t75 9 85-44 104-23"/><path d="M15 183q72-16 108-76t75 9 85-44 104-23" opacity=".25"/><circle cx="124" cy="94" r="10" fill="#2b6677"/><circle cx="285" cy="58" r="10" fill="#2b6677"/></g><g stroke="#62a0ad" stroke-width="2" opacity=".75"><path d="M95 20v152M200 20v152M305 20v152M20 55h355M20 115h355" stroke-dasharray="4 8"/></g><g fill="#a4e6e1" font-size="12" font-family="sans-serif"><text x="145" y="40">AoI</text><text x="310" y="130">SAC</text></g></svg></div><span class="image-caption">ROBOT LEARNING · NETWORKED CONTROL</span></div><div class="project-body"><div class="project-overline">Reinforcement learning · Delayed feedback</div><h3>SA-MASAC — Staleness-Aware Robot Tracking</h3><p>Developed a Soft Actor-Critic framework with model-assisted state reconstruction and Age-of-Information awareness for trajectory tracking under stochastic observation delays, packet loss, and stale feedback.</p><div class="project-method"><strong>Methods:</strong> Soft Actor-Critic · model-assisted estimation · Age of Information · stochastic networks</div><div class="project-status"><span>Manuscript under review</span><a href="#publications">Publication entry ↗</a></div></div></article>
+      <article class="project-card"><div class="project-image"><div class="image-art"><svg class="art-svg" viewBox="0 0 400 200" fill="none"><g stroke="#82d9d7" stroke-width="2" fill="none"><path d="M45 45h80v110H45zM160 45h80v110h-80zM275 45h80v110h-80z"/><path d="M80 142V92h15v50M195 142V62h15v80M310 142V112h15v30" stroke-width="12" opacity=".72"/><path d="M125 100h35M240 100h35" stroke-dasharray="6 4"/></g><g fill="#a3e3df"><circle cx="125" cy="100" r="5"/><circle cx="240" cy="100" r="5"/></g></svg></div><span class="image-caption">WIRELESS SCHEDULING · CONTROL</span></div><div class="project-body"><div class="project-overline">Information relevance · Sensor health</div><h3>SH-GOS — Sensor-Health-Aware Scheduling</h3><p>Developed a control-oriented wireless scheduling framework that jointly considers sensor reliability, information relevance, and transmission constraints. Evaluated against eight baseline scheduling policies and component-level ablations.</p><div class="project-method"><strong>Methods:</strong> Wireless networked control · scheduling · sensor health · ablation studies</div><div class="project-status"><span>Manuscript under review</span><a href="#publications">Publication entry ↗</a></div></div></article>
     </div>
-
-    <div class="project">
-      <h3>Detactic — GNSS-Resilient UAV</h3>
-      <p>AoA-Doppler interference-source localization
-      and information-driven UAV investigation planning.</p>
-    </div>
-
-    <div class="project">
-      <h3>SH-GOS</h3>
-      <p>Sensor-health-aware scheduling for
-      networked control systems.</p>
-    </div>
-
-    <div class="project">
-      <h3>MC-SPMR</h3>
-      <p>Maneuver-conditioned safety-preserving
-      multimodal perception reduction for mobile robots.</p>
-    </div>
-  </section>
-
-  <section>
-    <h2>Publications</h2>
-    <p>Selected publications and manuscripts will be listed here.</p>
-  </section>
-
-  <section>
-    <h2>Contact</h2>
-    <p>
-      <a href="https://github.com/Muhammad-Zeeshan-2023">
-        GitHub
-      </a>
-    </p>
-  </section>
-
-  <footer>
-    <p>© 2026 Muhammad Zeeshan</p>
-  </footer>
+    <div class="research-quote"><div><strong>MSc thesis · MC-SPMR</strong><p>Maneuver-conditioned safety-preserving multimodal perception reduction: studying how to reduce uncertain or conflicting perception hypotheses without introducing falsely safe maneuver decisions under sensor degradation.</p></div><a href="assets/Muhammad_Zeeshan_CV.pdf" target="_blank" rel="noopener">Read in CV ↗</a></div>
+    </div></section>
+    <section id="publications"><div class="container"><div class="section-header"><div><div class="eyebrow">03 / Research output</div><h2 class="section-title">Publications & manuscripts.</h2></div><p class="section-description">Publication statuses are carefully distinguished. Manuscripts under review and in preparation are not presented as published work.</p></div>
+    <div class="publication-list">
+      <article class="pub"><div class="pub-number">01</div><div><h3>Fault-aware hybrid MPC–reinforcement learning framework for adaptive sensor bias handling in industrial furnace temperature control</h3><p>B. Amna, <strong>M. Zeeshan</strong>, K. Raheel · <em>The Sciencetech</em>, vol. 7, no. 2 (2026)</p><span class="tag">Published journal article</span></div></article>
+      <article class="pub"><div class="pub-number">02</div><div><h3>RPL objective function with duty-cycle and transmission power awareness for ETSI EN 300 328 compliance</h3><p><strong>M. Zeeshan</strong>, B. J. Ngorima, M. Habibian Fard, S. Gormus · ASYU 2026</p><span class="tag">Presented · IEEE Xplore pending</span></div></article>
+      <article class="pub"><div class="pub-number">03</div><div><h3>SA-MASAC: Staleness-aware model-assisted reinforcement learning for robust mobile-robot trajectory tracking under stochastic network impairments</h3><p><strong>M. Zeeshan</strong>, E. Benli</p><span class="tag submitted">Under review</span></div></article>
+      <article class="pub"><div class="pub-number">04</div><div><h3>Bidirectional competence-driven curriculum learning for TD3-based lane-keeping control</h3><p><strong>M. Zeeshan</strong>, B. Amna, E. Benli</p><span class="tag submitted">Under review</span></div></article>
+      <article class="pub"><div class="pub-number">05</div><div><h3>SH-GOS: Sensor-health-aware goal-oriented scheduling for wireless networked control systems</h3><p><strong>M. Zeeshan</strong></p><span class="tag submitted">Under review</span></div></article>
+      <article class="pub"><div class="pub-number">06</div><div><h3>Authenticated allocation-aware IoT water meter with idempotent reporting and valve authorization</h3><p><strong>M. Zeeshan</strong>, B. Amna</p><span class="tag submitted">Under review</span></div></article>
+      <article class="pub"><div class="pub-number">07</div><div><h3>Statistical Cross-Modal Validation and Graceful Degradation for Robust RGB-D Person Following</h3><p><strong>M. Zeeshan</strong>, A. Didouh, A. Shoker</p><span class="tag prep">Ready to submit</span></div></article>
+      <details style="margin:10px 0"><summary style="cursor:pointer;font-weight:800;color:#176e92;font-size:.86rem;padding:9px 0">Show 2 additional works in preparation</summary><div class="publication-list" style="margin-top:12px"><article class="pub"><div class="pub-number">08</div><div><h3>Detactic: Confidence-driven active investigation of GNSS threats on mobile edge platforms</h3><p>A. Rabeh, A. Didouh, M. Al Khatib, <strong>M. Zeeshan</strong>, A. Bader, A. Shoker</p><span class="tag prep">In preparation</span></div></article><article class="pub"><div class="pub-number">09</div><div><h3>Comparative PI controller optimization using PSO, DA, and GWO for a VSI-fed double-cage induction motor drive</h3><p><strong>M. Zeeshan</strong>, M. Habibian Fard, H. I. Okumus</p><span class="tag prep">In preparation</span></div></article></div></details>
+    </div><p class="pub-mini-note">*Nine entries include published, presented, under-review, ready-to-submit, and in-preparation work. Links/DOIs will be added when verified and publicly available.</p></div></section>
+    <section class="section-alt" id="experience"><div class="container"><div class="section-header"><div><div class="eyebrow">04 / Background</div><h2 class="section-title">Academic experience & distinctions.</h2></div></div><div class="experience"><div class="experience-card"><div class="eyebrow">Research · 2026</div><h3>Visiting Research Student · KAUST</h3><div class="date">King Abdullah University of Science and Technology · Saudi Arabia</div><p>ROS 2 robotic platforms, multimodal sensing, navigation under degraded perception, and GNSS-resilient UAV investigation.</p></div><div class="experience-card"><div class="eyebrow">Education · 2025–Present</div><h3>MSc · Electrical & Electronics Engineering</h3><div class="date">Karadeniz Technical University · Türkiye Scholarships</div><p>CGPA 3.93/4.00, ranked 1st. Coursework includes learning-based control, robotic vision, pattern recognition and machine learning.</p></div><div class="experience-card"><div class="eyebrow">Teaching & research · 2024–Present</div><h3>Research & Teaching Assistant</h3><div class="date">Karadeniz Technical University</div><p>Research in learning-based control, optimization, robotics, and networked systems; support for teaching and laboratory work.</p></div><div class="experience-card"><div class="eyebrow">Education · 2019–2023</div><h3>BSc · Electrical Engineering</h3><div class="date">University of Engineering and Technology · Pakistan</div><p>CGPA 3.88/4.00, ranked 1st; Gold Medalist. Recipient of the Best Final Year Project Award.</p></div></div><div class="awards"><span class="award">Türkiye Scholarships Scholar</span><span class="award">BSc Gold Medal</span><span class="award">4× Merit Scholarship</span><span class="award">Best Final Year Project</span><span class="award">IELTS 7.0</span></div></div></section>
+    <section id="contact" class="contact-section"><div class="container contact-card"><div><div class="eyebrow">05 / Get in touch</div><h2>Open to research conversations.</h2><p>I welcome conversations about doctoral research and collaboration in robust autonomy, robot learning, multimodal perception, and learning-based control.</p></div><div class="contact-actions"><a class="btn btn-primary" href="mailto:engr.m.zeeshan.2023@gmail.com">Email me ↗</a><a class="btn btn-outline" href="https://github.com/Muhammad-Zeeshan-2023" target="_blank" rel="noopener">GitHub ↗</a><a class="btn btn-outline" href="https://www.linkedin.com/in/m-zeeshan-k/" target="_blank" rel="noopener">LinkedIn ↗</a></div></div></section>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><span>© <span id="year">2026</span> Muhammad Zeeshan · Academic research portfolio</span><div class="footer-links"><a href="#top">Back to top ↑</a><a href="assets/Muhammad_Zeeshan_CV.pdf" target="_blank" rel="noopener">CV</a><a href="mailto:engr.m.zeeshan.2023@gmail.com">Email</a></div></div></footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const menuButton=document.getElementById('menuButton'), navLinks=document.getElementById('navLinks');
+    menuButton.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));menuButton.textContent=open?'✕':'☰'});
+    navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuButton.setAttribute('aria-expanded','false');menuButton.textContent='☰'}));
+    document.querySelectorAll('.project-image img').forEach(img=>img.addEventListener('load',()=>img.parentElement.classList.add('has-image')));
+  </script>
 </body>
 </html>
