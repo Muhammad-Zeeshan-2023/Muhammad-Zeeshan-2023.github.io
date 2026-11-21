@@ -1,0 +1,7 @@
+Place your own images in this folder using exact names:
+
+scout-mini.jpg   — SCOUT MINI Pro robot photograph
+
+gnss-uav.jpg     — Detactic / GNSS-resilient UAV photograph
+
+Your index.html will show them automatically. JPEG landscape photos recommended.
